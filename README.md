@@ -1,6 +1,8 @@
 # DDD模型与设计思路
 
-![image-20220214151625359](/Users/autumnliw/Desktop/WQL Coding/ddd-demo/typora/image-20220214151625359.png)
+
+
+![image-20220214151625359](typora/image-20220214151625359.png)
 
 # 战略设计
 
@@ -12,7 +14,7 @@
 
 # 战术设计
 
-![image-20220214151356603](/Users/autumnliw/Desktop/WQL Coding/ddd-demo/typora/image-20220214151356603.png)
+![image-20220214151356603](typora/image-20220214151356603.png)
 
 # 领域故事分析
 
@@ -20,7 +22,7 @@
 
 举例：售卖机扫码支付购物的领域故事分析
 
-![image-20220214153816006](/Users/autumnliw/Desktop/WQL Coding/ddd-demo/typora/image-20220214153816006.png)
+![image-20220214153816006](typora/image-20220214153816006.png)
 
 # 关注点分离
 
@@ -48,17 +50,17 @@
 
 - 基础设施层 infrastructure，通用框架，工具
 
-![image-20220214164728407](/Users/autumnliw/Desktop/WQL Coding/ddd-demo/typora/image-20220214164728407.png)
+![image-20220214164728407](typora/image-20220214164728407.png)
 
 # 依赖倒置和洋葱六边形架构
 
 ## 模型图
 
-![image-20220214164803664](/Users/autumnliw/Desktop/WQL Coding/ddd-demo/typora/image-20220214164803664.png)
+![image-20220214164803664](typora/image-20220214164803664.png)
 
 ## 上下文代码架构层次
 
-![image-20220214175457697](/Users/autumnliw/Desktop/WQL Coding/ddd-demo/typora/image-20220214175457697.png)
+![image-20220214175457697](typora/image-20220214175457697.png)
 
 # 实体和值对象
 
@@ -139,7 +141,7 @@
 
 # 领域事件和大数据分析
 
-![image-20220215110615842](/Users/autumnliw/Desktop/WQL Coding/ddd-demo/typora/image-20220215110615842.png)
+![image-20220215110615842](typora/image-20220215110615842.png)
 
 # 什么是事件风暴
 
