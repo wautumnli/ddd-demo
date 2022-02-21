@@ -281,3 +281,98 @@
 - 与组织架构匹配
 - 可组合性
 - 方便替代和升级
+
+# 项目代码结构
+
+## repository
+
+repository在application层定义接口，在port层实现。一个repository可以是多个到加载一个领域实体。
+
+## cmdService
+
+拿的是对象，存的也是对象
+
+## po
+
+一个po对应一张表
+
+## dto
+
+返回前端的对象，可以是个"宽对象"
+
+## cmd
+
+前端查询操作条件
+
+## condition
+
+查询结果，可能是多个表联合出来的长表
+
+## 代码结构
+
+```
+├── demo-api ----------------------------------------------------------------------------【api】
+├── demo-application --------------------------------------------------------------------【应用层】
+│   └── application
+│       └── social
+│           ├── command
+│           │   ├── IEntityMetaCmdService.java ------------------------------------------【cmd接口】
+│           │   ├── IPersonCmdService.java
+│           │   ├── cmd -----------------------------------------------------------------【cmd实体】
+│           │   │   ├── EntityMetaCmd.java
+│           │   │   └── PersonCmd.java
+│           │   ├── impl ----------------------------------------------------------------【cmd实现】
+│           │   │   ├── EntityMetaCmdServiceImpl.java
+│           │   │   └── PersonCmdServiceImpl.java
+│           │   ├── repository ----------------------------------------------------------【仓库接口】
+│           │   │   ├── IEntityMetaRepository.java
+│           │   │   └── IPersonRepository.java
+│           │   └── tx
+│           │       ├── IEntityMetaTransactionService.java
+│           │       ├── IPersonTransactionService.java
+│           │       └── impl
+│           │           ├── EntityMetaTransactionServiceImpl.java
+│           │           └── PersonTransactionServiceImpl.java
+│           ├── dto ----------------------------------------------------------------------【DTO】
+│           └── query
+│               ├── IEntityMetaQueryService.java
+│               ├── IPersonQueryService.java
+│               └── condition
+│                   ├── EntityMetaCondition.java
+│                   └── PersonCondition.java
+├── demo-core
+│   └── core
+│       ├── constant ----------------------------------------------------------------------【常量】
+│       │   └── Constant.java
+│       └── dto ---------------------------------------------------------------------------【共用dto】
+│           └── Result.java
+├── demo-domain
+│   └── domain
+│       └── social
+│           └── entity
+│               ├── EntityMeta.java
+│               └── Person.java
+├── demo-port
+│   └── port
+│       ├── demand
+│       │   └── persistent
+│       │       ├── common
+│       │       │   └── config ---------------------------------------------【共用配置类】
+│       │       │       ├── CustomMetaObjectHandler.java
+│       │       │       └── MybatisPlusConfig.java
+│       │       └── social
+│       │           ├── dao ------------------------------------------------【初始化实现】
+│       │           ├── mapper ---------------------------------------------【mapper转换】
+│       │           ├── po -------------------------------------------------【持久化实体】
+│       │           ├── query ----------------------------------------------【查询实现】
+│       │           └── repository -----------------------------------------【仓库实现】
+│       └── supply
+│           └── web
+│               ├── controller ---------------------------------------------【controller】
+│               └── interceptor --------------------------------------------【拦截器】
+│                   └── GlobalExceptionHandler.java
+├── demo-spi ---------------------------------------------------------------【spi模块】
+├── demo-start -------------------------------------------------------------【start模块】
+│   └── DemoApplication.java -----------------------------------------------【启动类】
+```
+
