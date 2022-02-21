@@ -1,3 +1,8 @@
 rootProject.name = 'ddd-demo'
-include 'ddd-start'
+include 'master-demo'
+include 'stock-demo'
+include 'inbound-demo'
+include 'outbound-demo'
+include 'inventory-demo'
+include 'start-demo'
 

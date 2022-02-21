@@ -1,15 +1,15 @@
-package com.ql.ddd.demo.start;
+package com.ql.ddd.start;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author wanqiuli
- * @date 2022/2/16 8:08 PM
+ * @date 2022/2/21 6:03 下午
  */
 @SpringBootApplication
-public class DemoApplicationStart {
+public class StartApplication {
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplicationStart.class, args);
+        SpringApplication.run(StartApplication.class, args);
     }
 }
