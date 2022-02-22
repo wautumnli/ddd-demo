@@ -5,8 +5,6 @@ import com.ql.ddd.port.demand.persistent.common.base.BasePo;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.math.BigDecimal;
-
 /**
  * @author wanqiuli
  * @date 2022/2/22 14:09
