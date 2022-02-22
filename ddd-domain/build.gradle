@@ -1,1 +1,4 @@
-dependencies {}
+dependencies {
+    implementation project(':ddd-core')
+    implementation project(':ddd-spi')
+}

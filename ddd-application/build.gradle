@@ -1,1 +1,5 @@
-dependencies {}
+dependencies {
+    implementation project(':ddd-api')
+    implementation 'org.springframework:spring-context'
+    implementation 'org.springframework:spring-tx'
+}
