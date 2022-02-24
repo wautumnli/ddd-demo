@@ -17,6 +17,7 @@ public abstract class Container {
     private String parentContainerNo;
     private String containerNo;
     private Integer number;
+    private String createUser;
 
     /**
      * 容器添加领域动作

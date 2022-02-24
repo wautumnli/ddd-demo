@@ -6,6 +6,7 @@ import com.ql.ddd.domain.container.Container;
 import com.ql.ddd.domain.container.StockContainer;
 import com.ql.ddd.port.demand.persistent.container.dao.ContainerDao;
 import com.ql.ddd.port.demand.persistent.container.po.ContainerPo;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
@@ -16,6 +17,7 @@ import static com.ql.ddd.port.demand.persistent.container.mapper.ContainerMapper
  * @author wanqiuli
  * @date 2022/2/22 14:18
  */
+@Slf4j
 @Repository
 public class ContainerRepositoryImpl implements ContainerRepository {
 
@@ -34,7 +36,12 @@ public class ContainerRepositoryImpl implements ContainerRepository {
 
     @Override
     public void save(StockContainer stockContainer) {
-        ContainerPo containerPo = MAPPER.toContainerPo(stockContainer);
+        ContainerPo containerPo = null;
+        try {
+            containerPo = MAPPER.toContainerPo(stockContainer);
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
+        }
         containerDao.insert(containerPo);
     }
 }
