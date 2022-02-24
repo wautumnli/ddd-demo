@@ -2,7 +2,6 @@ package com.ql.ddd.port.demand.persistent.container.query;
 
 import com.ql.ddd.application.container.query.ContainerQueryRepository;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 /**
  * @author wanqiuli

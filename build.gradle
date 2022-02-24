@@ -11,15 +11,20 @@ buildscript {
 
 // 所有项目所配置
 allprojects {
+    apply plugin: 'java-library'
+    apply plugin: 'maven-publish'
+
     group project_group
     version project_version
 }
 
 // 子项目配置
 subprojects {
-    apply plugin: 'java'
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
 
     repositories {
         mavenLocal()
@@ -29,5 +34,8 @@ subprojects {
     dependencies {
         implementation 'org.projectlombok:lombok:1.18.22'
         annotationProcessor 'org.projectlombok:lombok:1.18.22'
+        implementation 'org.mapstruct:mapstruct:1.5.0.Beta2'
+        annotationProcessor 'org.mapstruct:mapstruct:1.5.0.Beta2'
+        implementation 'org.apache.commons:commons-lang3:3.4'
     }
 }

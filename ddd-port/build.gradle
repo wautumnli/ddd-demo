@@ -4,4 +4,5 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'mysql:mysql-connector-java:8.0.28'
     implementation 'com.baomidou:mybatis-plus-boot-starter:3.4.3'
+    implementation 'javax.validation:validation-api:2.0.1.Final'
 }

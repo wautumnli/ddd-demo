@@ -1,5 +1,7 @@
 dependencies {
-    implementation project(':ddd-api')
+    implementation project(':ddd-core')
+    api project(':ddd-domain')
     implementation 'org.springframework:spring-context'
     implementation 'org.springframework:spring-tx'
+    implementation 'javax.validation:validation-api:2.0.1.Final'
 }

@@ -17,7 +17,7 @@ public class Result<T> {
     /**
      * @return the response data
      */
-    public static Result<?> success() {
+    public static Result<Void> success() {
         return new Result<>();
     }
 

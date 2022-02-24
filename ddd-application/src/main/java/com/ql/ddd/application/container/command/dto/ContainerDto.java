@@ -1,4 +1,4 @@
-package com.ql.ddd.application.container.dto;
+package com.ql.ddd.application.container.command.dto;
 
 /**
  * @author wanqiuli
